@@ -1,0 +1,95 @@
+{
+  "clip": "clip_01",
+  "frames": 190,
+  "iou_threshold": 0.5,
+  "pred_file": "/content/Day3-Lab/annotations/clip_01/gt.txt",
+  "gt_file": "/content/Day3-Lab/gold/clip_01/gt.txt",
+  "pred_label": "nhãn của bạn",
+  "gt_label": "gold clip_01",
+  "metrics": {
+    "HOTA": 0.8078,
+    "DetA": 0.7953,
+    "AssA": 0.8222,
+    "LocA": 0.8804,
+    "IDF1": 0.9571,
+    "IDTP": 536,
+    "IDFP": 11,
+    "IDFN": 37,
+    "MOTA": 0.9162,
+    "MOTP": 0.8692,
+    "IDSW": 0,
+    "FP": 11,
+    "FN": 37,
+    "GT_boxes": 573,
+    "PRED_boxes": 547
+  },
+  "gate": {
+    "checks": {
+      "IDF1": {
+        "value": 0.9571428571428572,
+        "required": 0.8,
+        "passed": true
+      },
+      "MOTA": {
+        "value": 0.9162303664921466,
+        "required": 0.75,
+        "passed": true
+      },
+      "MOTP": {
+        "value": 0.8691894038948849,
+        "required": 0.7,
+        "passed": true
+      }
+    },
+    "passed": true
+  },
+  "diagnostics": {
+    "missed_gt_tracks": [],
+    "fragmented_gt_tracks": [],
+    "partially_covered_gt_tracks": [
+      {
+        "gt_track": 6,
+        "covered": 44,
+        "gt_length": 56,
+        "ratio": 0.79
+      }
+    ],
+    "ghost_pred_tracks": [
+      {
+        "pred_track": 4,
+        "reason": "còn bbox sau khi track tham chiếu 4 đã rời khung",
+        "frames": [
+          149,
+          151
+        ],
+        "length": 3
+      },
+      {
+        "pred_track": 8,
+        "reason": "còn bbox sau khi track tham chiếu 8 đã rời khung",
+        "frames": [
+          169,
+          171
+        ],
+        "length": 3
+      }
+    ],
+    "id_switches": [],
+    "loose_boxes": [
+      {
+        "frame": 96,
+        "gt_track": 5,
+        "pred_track": 5,
+        "iou": 0.587
+      },
+      {
+        "frame": 86,
+        "gt_track": 5,
+        "pred_track": 5,
+        "iou": 0.595
+      }
+    ],
+    "n_gt_tracks": 8,
+    "n_pred_tracks": 8
+  }
+}
